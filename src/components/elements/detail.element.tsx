@@ -1,6 +1,5 @@
-import React from "react";
 import { Button } from "../ui/button";
-import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
+import { Alert, AlertDescription } from "@/components/ui/alert";
 
 function DetailElement() {
   return (
