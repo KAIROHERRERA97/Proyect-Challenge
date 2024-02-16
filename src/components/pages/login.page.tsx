@@ -8,7 +8,7 @@ import { useNavigate } from "react-router-dom";
 function LoginPage() {
   const { toast } = useToast();
 
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
   const [data, setData] = useState<{ email: string; password: string }>({
     email: "",
@@ -37,7 +37,7 @@ function LoginPage() {
     }
   }
 
-  function fetchLogin(values:any) {
+  function fetchLogin(values: any) {
     if (values.email === "admin@gmail.com" && values.password === "admin") {
       return true;
     } else {
@@ -75,7 +75,9 @@ function LoginPage() {
             }) => (
               <form onSubmit={handleSubmit} className="gap-4 flex flex-col">
                 <div className="flex flex-col gap-2.5">
-                  <label htmlFor="">Email</label>
+                  <label htmlFor="" className="font-semibold">
+                    Email
+                  </label>
                   <input
                     autoComplete="off"
                     type="email"
@@ -85,10 +87,14 @@ function LoginPage() {
                     value={values.email}
                     className="px-2 py-1 border rounded-md border-amber-600 outline-none shadow-md"
                   ></input>
-                  <span className="text-red-500 font-semibold">{errors.email && touched.email && errors.email}</span>
+                  <span className="text-red-500 font-semibold">
+                    {errors.email && touched.email && errors.email}
+                  </span>
                 </div>
                 <div className="flex flex-col gap-2.5">
-                  <label htmlFor="">Password</label>
+                  <label htmlFor="" className="font-semibold">
+                    Password
+                  </label>
                   <input
                     autoComplete="off"
                     type="password"
@@ -109,7 +115,7 @@ function LoginPage() {
                     disabled={isSubmitting}
                     className="bg-cyan-900 border border-cyan-900 text-amber-400 shadow-md"
                   >
-                    Login 
+                    Login
                   </Button>
                 </div>
               </form>
