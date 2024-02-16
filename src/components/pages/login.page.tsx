@@ -1,4 +1,4 @@
-import { FormEvent, useState } from "react";
+import { useState } from "react";
 import { Button } from "../ui/button";
 import { useToast } from "@/components/ui/use-toast";
 import { Formik } from "formik";
@@ -14,7 +14,7 @@ function LoginPage() {
     email: "",
     password: "",
   });
-
+// FNT QUE MUESTRA EL TOAS SI ESTAN CORRECTOS LOS DATOS DE AUTENTICACIÓN
   function handleSubmit(values: any) {
     const response = fetchLogin(values);
     if (!response) {
@@ -36,7 +36,7 @@ function LoginPage() {
       }, 2000);
     }
   }
-
+// FUNCION PARA AUTENTICAR EL CORREO Y EL PASSWORD
   function fetchLogin(values: any) {
     if (values.email === "admin@gmail.com" && values.password === "admin") {
       return true;
@@ -55,6 +55,7 @@ function LoginPage() {
           Sistema de Carga de Datos
         </h1>
         <div className="mx-8 mt-14 ">
+          {/* USO DE LIBRERIA FORMIK (FORMULARIO) */}
           <Formik
             initialValues={data}
             validationSchema={loginSchema}
@@ -70,7 +71,6 @@ function LoginPage() {
               handleBlur,
               handleSubmit,
               isSubmitting,
-              isValidating,
               /* and other goodies */
             }) => (
               <form onSubmit={handleSubmit} className="gap-4 flex flex-col">

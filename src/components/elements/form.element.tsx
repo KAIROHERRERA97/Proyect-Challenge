@@ -3,8 +3,6 @@ import { Button } from "../ui/button";
 import { useToast } from "../ui/use-toast";
 
 function FormElement({ setSection }: { setSection: any }) {
-  // const [file, setFile] = useState("");
-
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
 
   const { toast } = useToast();

@@ -5,13 +5,15 @@ import { Button } from "../ui/button";
 import { useNavigate } from "react-router-dom";
 
 function IndexPage() {
+  
   const navigate = useNavigate();
   const [section, setSection] = useState("upload");
+  // FUNCION PARA IR AL LOGIN
   function handleLogout() {
     window.localStorage.clear();
     navigate("/login");
   }
-
+  // RENDERIZAR LA SECCION UPLOAD O DETAIL
   if (section === "upload") {
     return (
       <div className="w-full h-svh flex flex-col bg-blue-300 items-center">
