@@ -113,7 +113,7 @@ function LoginPage() {
                   <Button
                     type="submit"
                     disabled={isSubmitting}
-                    className="bg-cyan-900 border border-cyan-900 text-amber-400 shadow-md"
+                    className="bg-cyan-900 border border-cyan-900 text-amber-400 shadow-md text-lg"
                   >
                     Login
                   </Button>
