@@ -35,12 +35,20 @@ function IndexPage() {
   } else if (section === "detail") {
     return (
       <div className="w-full h-svh flex flex-col bg-blue-300 items-center">
+        <header className="w-full flex justify-between">      
         <h1
           className=" text-4xl font-bold
-      text-cyan-1000 mt-20 text-left px-40 w-full"
+          text-cyan-1000 mt-20 text-left px-40 w-full"
         >
           Sistema de Carga de Datos
         </h1>
+        <Button
+            onClick={handleLogout}
+            className="bg-cyan-900 m-5 border   text-amber-400 shadow-md border-cyan-900"
+          >
+            Logout
+          </Button>
+        </header>
         <DetailElement setSection={setSection}></DetailElement>
       </div>
     );
