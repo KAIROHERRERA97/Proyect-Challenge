@@ -6,7 +6,7 @@ import { useState } from "react";
 function DetailElement({ setSection }: { setSection: any }) {
   const { toast } = useToast();
 
-  function handleChange() {
+  function handleChange(){
     toast({
       description: "Redirigiendo... ⌛",
       duration: 1000,
