@@ -22,11 +22,13 @@ function LoginPage() {
         variant: "destructive",
         title: "OH!🤯",
         description: "Error en la autenticación.",
+        duration: 2000,
       });
     } else {
       toast({
         title: "OK!🫡",
         description: "Autenticación correcta, redirigiendo...",
+        duration: 2000,
       });
 
       setTimeout(() => {
@@ -44,11 +46,11 @@ function LoginPage() {
   }
 
   return (
-    <div className="w-full h-svh flex justify-center bg-green-100">
+    <div className="w-full h-svh flex justify-center bg-blue-300">
       <div className="mt-40">
         <h1
           className=" text-3xl font-bold
-      text-red-600"
+      text-cyan-1000"
         >
           Sistema de Carga de Datos
         </h1>
@@ -105,7 +107,7 @@ function LoginPage() {
                   <Button
                     type="submit"
                     disabled={isSubmitting}
-                    className="bg-cyan-900 border border-amber-600 text-amber-400 shadow-md"
+                    className="bg-cyan-900 border border-cyan-900 text-amber-400 shadow-md"
                   >
                     Login 
                   </Button>
