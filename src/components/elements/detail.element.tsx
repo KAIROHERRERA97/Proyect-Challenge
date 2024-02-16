@@ -30,15 +30,18 @@ function DetailElement({ setSection }: { setSection: any }) {
   return (
     <div className=" mx-10 border bg-amber-100 border-amber-500 shadow-xl rounded-xl flex flex-col gap-14 items-center w-[80%] h-[70%] mt-10 pt-10 pl-20 pr-20">
       <header className="flex w-full justify-between items-center gap-[30%]">
-        <div className="w-full flex justify-end">
+        <div className="w-[90%] flex flex-col items-center">
           {showInfo ? (
-            <Alert className="w-fit text-md border-green-600 text-green-600 shadow-md">
-              <AlertDescription>
-                You can add components and dependencies to your app using the
-                cli.
-                <span onClick={(e) => setShowInfo(false)} role="button">
+            <Alert className="text-md border-green-600 text-green-600 shadow-md w-fit">
+              <AlertDescription className="text-lg">
+                ✅ records uploades succefuly
+                <span
+                  onClick={(e) => setShowInfo(false)}
+                  role="button"
+                  className="text-sm pl-20"
+                >
                   {" "}
-                  ❎{" "}
+                  ✖️{" "}
                 </span>
               </AlertDescription>
             </Alert>
@@ -57,7 +60,8 @@ function DetailElement({ setSection }: { setSection: any }) {
       </header>
       <div>
         <h4>
-          exrctvybuinhugyftdsrasdtfyguhgyftdrsghjghfytdfyghjghfertgyuytrtyuy
+          The (2) records listen below encountered errors. Please rectify these
+          issues and retry.
         </h4>
       </div>
       <table className="w-full" cellPadding={8}>

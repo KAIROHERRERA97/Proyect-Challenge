@@ -85,7 +85,7 @@ function LoginPage() {
                     value={values.email}
                     className="px-2 py-1 border rounded-md border-amber-600 outline-none shadow-md"
                   ></input>
-                  <span>{errors.email && touched.email && errors.email}</span>
+                  <span className="text-red-500 font-semibold">{errors.email && touched.email && errors.email}</span>
                 </div>
                 <div className="flex flex-col gap-2.5">
                   <label htmlFor="">Password</label>
@@ -98,7 +98,7 @@ function LoginPage() {
                     value={values.password}
                     className="px-2 py-1 border rounded-md border-amber-600 outline-none shadow-md"
                   ></input>
-                  <span>
+                  <span className="text-red-500 font-semibold">
                     {errors.password && touched.password && errors.password}
                   </span>
                 </div>

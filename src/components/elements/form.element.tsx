@@ -3,12 +3,14 @@ import { Button } from "../ui/button";
 import { useToast } from "../ui/use-toast";
 
 function FormElement({ setSection }: { setSection: any }) {
-  const [file, setFile] = useState(true);
+  // const [file, setFile] = useState("");
+
+  const [selectedFile, setSelectedFile] = useState<File | null>(null);
 
   const { toast } = useToast();
 
-  function handleSubmit(setFile: boolean) {
-    if (setFile) {
+  function handleSubmit() {
+    if (selectedFile) {
       toast({
         title: "Cargando...",
         description: "Estamos validando el archivo 🗃️",
@@ -36,7 +38,9 @@ function FormElement({ setSection }: { setSection: any }) {
         Selecciona un Archivo:
       </label>
       <input
-        onChange={(e: any) => setFile(e.target.files[0])}
+        onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+          setSelectedFile(e.target.files ? e.target.files[0] : null)
+        }
         accept=".xlsx, .csv"
         type="file"
         className="px-2 py-1 border rounded-md border-red-600 outline-none shadow-md font-semibold"
